@@ -1,0 +1,233 @@
+.pxl-icon-box {
+	position: relative;
+	.pxl-item--link {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 99;
+	}
+}
+
+.pxl-icon-box1 {
+	&.style-1 {
+		padding: 30px 30px 27px;
+		background-color: #{'rgba(var(--primary-color-rgb),0.1)'};
+		@media #{$max-lg} {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		.pxl-item--icon {
+			background-color: $primary_color;
+			width: 72px;
+			height: 72px;
+			color: #fff;
+			font-size: 36px;
+			line-height: 1;
+			border-radius: 72px;
+			margin-bottom: 18px;
+			img {
+				max-height: 36px;
+			}
+			svg {
+				height: 36px;
+			}
+		}
+		.pxl-item--title {
+			font-weight: 600;
+			margin-bottom: 11px;
+			font-size: 24px;
+			@media #{$max-lg} {
+				font-size: 20px;
+			}
+		}
+		.pxl-item--description {
+			color: #2D2D2D;
+			line-height: 1.8;
+			@media #{$max-lg} {
+				font-size: 17px;
+			}
+		}
+	}
+	&.style-2 {
+		.pxl-item--icon {
+			background-color: #{'rgba(var(--primary-color-rgb),0.2)'};
+			border: 1px solid #{'rgba(var(--primary-color-rgb),0.2)'};
+			min-width: 40px;
+			width: 40px;
+			height: 40px;
+			color: $primary_color;
+			font-size: 21px;
+			line-height: 1;
+			border-radius: 40px;
+			margin-right: 16px;
+			img {
+				max-height: 21px;
+			}
+			svg {
+				height: 21px;
+			}
+		}
+		.pxl-item--title {
+			margin-top: 7px;
+			margin-bottom: 0;
+			font-size: 18px;
+		}
+		.pxl-item--description {
+			margin-top: 15px;
+		}
+		.pxl-item--inner {
+			display: flex;
+			flex-wrap: nowrap;
+		}
+	}
+	&.style-3 {
+		text-align: center;
+		background-color: $primary_color;
+		padding: 30px 20px;
+		color: #fff;
+		.pxl-item--icon {
+			line-height: 1;
+			font-size: 42px;
+			margin-bottom: 10px;
+		}
+		.pxl-item--title {
+			margin-bottom: 0;
+			font-family: inherit;
+			font-size: 16px;
+			text-transform: uppercase;
+			color: #fff;
+			font-weight: 500;
+		}
+		.pxl-item--description {
+			margin-top: 16px;
+		}
+	}
+	&.style-4 {
+		text-align: center;
+		background-color: rgba(#fff, 0.05);
+		padding: 48px 20px 20px 20px;
+		.pxl-item--icon {
+			line-height: 1;
+			margin-bottom: 40px;
+		}
+		.pxl-item--title {
+			line-height: 1.25;
+			margin-bottom: 0;
+			font-size: 24px;
+			font-weight: 500;
+			font-family: inherit;
+			min-height: 60px;
+		}
+		.pxl-item--description {
+			padding-top: 15px;
+		}
+	}
+}
+
+.el-fullheight {
+	height: 100%;
+	.elementor-widget-container, .elementor-widget-container > div {
+		height: 100%;
+	}
+	.elementor-widget-container > div {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.pxl-icon-box2 {
+	.pxl-item--icon {
+		line-height: 1;
+		font-size: 55px;
+		color: $primary_color;
+	}
+	.pxl-item--title {
+		margin-bottom: 0;
+		font-size: 18px;
+		line-height: normal;
+	}
+	.pxl-item--description {
+		margin-top: 22px;
+	}
+	.pxl-item--holder {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+	}
+}
+
+.pxl-icon-box3 {
+	.pxl-item--icon {
+		position: relative;
+		z-index: 1;
+		&:before {
+			content: '';
+			width: 108px;
+			height: 108px;
+			background-color: $primary_color;
+			border-radius: 108px;
+			opacity: 0.39;
+			z-index: -1;
+			position: absolute;
+			left: -58px;
+			top: 50%;
+			@include transform(translate(0, -50%));
+		}
+	}
+	.pxl-item--title {
+		font-size: 24px;
+		margin-bottom: 0;
+		margin-right: 20px;
+		position: relative;
+		z-index: 9;
+		@media #{$max-lg} {
+			font-size: 20px;
+		}
+	}
+	.pxl-item--description {
+		font-size: 17px;
+		color: #000000;
+		line-height: 1.647;
+		@media #{$max-lg} {
+			font-size: 16px;
+		}
+	}
+	.pxl-item--meta {
+		margin-bottom: 14px;
+		flex-wrap: nowrap;
+	}
+	.pxl-item--inner {
+		padding: 30px 26px 33px 26px;
+		@include transition(all 300ms linear 0ms);
+		border-radius: 50px;
+		border-radius: 5px;
+		&:hover {
+			box-shadow: 0 22px 27px rgba(#000000, 0.07);
+			background-color: #fff;
+		}
+	}
+	&.item-align-right {
+		.pxl-item--icon:before {
+			left: auto;
+			right: -58px;
+		}
+		.pxl-item--title {
+			margin-right: 0;
+			margin-left: 20px;
+		}
+		.pxl-item--meta {
+			flex-direction: row-reverse;
+		}
+		.pxl-item--inner {
+			text-align: right;
+		}
+	}
+}
+
+body.rtl {
+	
+}

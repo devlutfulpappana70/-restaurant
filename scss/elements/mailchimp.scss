@@ -1,0 +1,198 @@
+.mc4wp-alert {
+	margin-top: 14px;
+	font-size: 16px;
+	line-height: 1.625;
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+.pxl-mailchimp-l1 {
+	&.style-blur {
+		max-width: 554px;
+		margin: 0 auto;
+		[type="email"] {
+			height: 72px;
+			border-radius: 5px;
+			font-size: 18px;
+			color: rgba(255,255,255,0.8);
+			border: none;
+			padding: 0 32px;
+			background-color: rgba(#fff, 0.15);
+        	backdrop-filter: blur(12px);
+        	@media #{$max-xs} {
+        		height: 60px;
+        	}
+		}
+		[type="submit"] {
+			position: absolute;
+			top: 6px;
+			right: 6px;
+			line-height: 60px;
+			clip-path: none;
+			font-weight: 400;
+			color: #fff;
+			padding: 0 34px;
+			border-radius: 5px;
+			@media #{$max-xs} {
+				position: static;
+				margin-top: 10px;
+				width: 100%;
+			}
+			&:before, &:after {
+		        background-color: #000;
+		        content: "";
+		        height: 100%;
+		        left: -110%;
+		        opacity: 0.1;
+		        position: absolute;
+		        top: 0;
+		        @include transition(all 0.5s ease 0s);
+		        @include transform(skewX(25deg));
+		        width: 100%;
+		        z-index: -1;
+		    }
+		    &:hover {
+		        &:before {
+		            left: -10%;
+		            @include transition(all 0.3s ease 0s);
+		        }
+		        &:after {
+		            left: -20%;
+		        }
+		    }
+		}
+		.mc4wp-form-fields {
+			position: relative;
+		}
+		.mc4wp-alert {
+			color: rgba(#fff, 0.8);
+		}
+	}
+	&.style-box {
+		max-width: 835px;
+		margin: auto;
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+		padding-top: 98px;
+		&:before, &:after {
+			content: '';
+			width: 27px;
+			height: 103px;
+			background-image: url(../img/newsletter-shape.png);
+			background-position: center bottom;
+			background-size: cover;
+			background-repeat: no-repeat;
+			position: absolute;
+			top: 0;
+		}
+		&:before {
+			left: 128px;
+			@media #{$max-sm} {
+				left: 60px;
+			}
+		}
+		&:after {
+			right: 128px;
+			@media #{$max-sm} {
+				right: 60px;
+			}
+		}
+		.pxl-mailchimp--title {
+			color: #fff;
+			font-size: 22px;
+			font-weight: 700;
+			min-width: 185px;
+			padding: 10px 20px;
+			background-color: #a96625;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			border-radius: 92px 0 0 92px;
+			background-image: url(../img/newsletter-overlay.png);
+			@media #{$max-sm} {
+				width: 100%;
+				border-radius: 20px 20px 0 0;
+			}
+		}
+		.pxl-field--button {
+			background-color: #373737;
+			padding: 18px 16px 18px 47px;
+			border-radius: 0 92px 92px 0;
+			@media #{$max-sm} {
+				width: 100%;
+				border-radius: 0 0 20px 20px;
+				padding: 30px 20px;
+			}
+			button {
+				color: #070808;
+				font-size: 16px;
+				font-weight: 700;
+				background-color: #d3d3d3;
+				width: 100%;
+				padding: 0 30px;
+				line-height: 56px;
+				border-radius: 56px;
+				min-width: 160px;
+				display: inline-flex;
+				align-items: center;
+				@media #{$max-sm} {
+					justify-content: center;
+				}
+				&:before {
+					content: "\f13b";
+					margin-right: 8px;
+					font-family: "Caseicon";
+					font-weight: normal;
+					font-size: 18px;
+				}
+			}
+		}
+		.pxl-field--email {
+			flex-grow: 1;
+			align-items: center;
+			display: flex;
+			flex-wrap: wrap;
+			background-color: #0d0b0c;
+			padding: 10px 38px 10px 30px;
+			@media #{$max-sm} {
+				padding-top: 30px;
+				padding-bottom: 30px;
+			}
+			input {
+				height: 30px;
+				padding: 0;
+				background: none;
+				border-width: 0 0 1px 0;
+				border-style: solid;
+				border-color: #373737;
+				font-size: 16px;
+				color: rgba(#fdfdfd, 0.42);
+				font-weight: 500;
+				font-style: italic;
+				&:focus {
+					color: #fdfdfd;
+				}
+			}
+		}
+		.mc4wp-form-fields {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.mc4wp-form {
+			flex-grow: 1;
+		}
+	}
+}
+
+body.rtl {
+	.pxl-mailchimp-l1 {
+		&.style-blur {
+			[type="submit"] {
+				right: auto;
+				left: 6px;
+			}
+		}
+	}
+}

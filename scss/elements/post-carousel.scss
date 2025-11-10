@@ -1,0 +1,98 @@
+/*--------------------------------------------------------------
+POST CAROUSEL
+----------------------------------------------------------------
+# Carousel Reset
+# Blog
+# Portfolio
+# Service
+--------------------------------------------------------------*/
+
+.pxl--hide-arrow .pxl-swiper-arrow-wrap {
+	opacity: 0 !important;
+	visibility: hidden !important;
+	position: absolute;
+}
+
+.swiper-filter-active {
+	.non-swiper-slide {
+		display: none;
+	}
+}
+
+.swiper-filter-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	.filter-item {
+		display: inline-block;
+		font-size: 13px;
+		text-transform: uppercase;
+		font-weight: 700;
+		@extend .ft-theme-default;
+		margin: 10px 24px;
+		cursor: pointer;
+		position: relative;
+		z-index: 1;
+		&:before {
+			content: '';
+			width: 11px;
+			height: 41px;
+			@include border-radius(11px);
+			background-color: #f4f4f4;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			@include transform(translate(-50%, -50%) scaleY(0));
+			opacity: 0;
+			@include transition(all .25s cubic-bezier(.645,.045,.355,1));
+			z-index: -1;
+		}
+		span {
+			color: #010927;
+			@include transition(all .25s cubic-bezier(.645,.045,.355,1));
+		}
+		&.active {
+			color: $primary_color;
+			span {
+				@extend .text-gradient;
+			}
+			&:before {
+				opacity: 1;
+				@include transform(translate(-50%, -50%) scaleY(1));
+			}
+		}
+	}
+}
+
+.pxl-swiper-sliders .pxl-item--image img {
+	width: 100%;
+}
+
+.pxl-swiper-sliders {
+	.pxl-item--title, .pxl-item--category {
+		a {
+			color: inherit;
+			&:hover {
+				color: inherit;
+			}
+		}
+	}
+}
+
+// Start Blog
+//--------------------------------------------------
+
+// End Blog
+//--------------------------------------------------
+
+// Start Portfolio
+//--------------------------------------------------
+
+// End Portfolio
+//--------------------------------------------------
+
+// Start Service
+//--------------------------------------------------
+// End Service
+//--------------------------------------------------

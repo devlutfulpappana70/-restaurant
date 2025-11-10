@@ -1,0 +1,15 @@
+.pxl--progressbar {
+    @include transition(width 1.4s ease);
+    width: 0;
+    &.vertical {
+        @include transition(height 1.4s ease);
+        height: 0;
+    }
+}
+.pxl-progressbar-1 {
+    
+}
+
+body.rtl {
+    
+}
